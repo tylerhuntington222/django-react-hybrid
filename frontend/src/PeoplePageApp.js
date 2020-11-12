@@ -1,42 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Person from './components/Person'
 
 class AboutPage extends React.Component {
-  constructor({users}) {
-    super({users})
+  constructor(props) {
+    super(props)
   }
 
   render() {
     return (
     <div>
-        <h1>Featured Players</h1>
-
-        {users.map(user =>
-            <p>
-
-            <a href={`/user/${user.username}/`}>
-                {user.username}
-            </a>
-            </p>
+        {this.props.users.map(user =>
+          <Person user={user}/>
                     )}
     </div>
     )
   }
 }
 
-// const About = ({users}) =>
-//     <div>
-//         <h1>Featured Players</h1>
-//
-//         {users.map(user =>
-//             <p>
-//
-//             <a href={`/user/${user.username}/`}>
-//                 {user.username}
-//             </a>
-//             </p>
-//                     )}
-//     </div>
 
 ReactDOM.render(
   // gets the props that are passed in the template

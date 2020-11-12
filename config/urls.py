@@ -11,8 +11,6 @@ from django.views.generic import TemplateView
 from config.views import HomeView, AboutView, PeopleView
 
 
-
-
 urlpatterns = [
     path("", HomeView.as_view(), name='home'),
     re_path(r'^app/(?P<route>.*)$', TemplateView.as_view(template_name="index.html"), name='app'),
