@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load templatetags %}
+
+{% block content %}
+{#  {% block above_react_app %}{% endblock %}#}
+    <div id="react">
+        <!-- Contents get replaced by mounted React.Component -->
+        <i class="pending">Loading components...</i><br><br>
+    </div>
+
+    <script>
+      // make sure to escape props to prevent XSS!
+      // See here for the source for the json filter:
+      // https://gist.github.com/pirate/c18bfe4fd96008ffa0aef25001a2e88f
+        window.props = {{props|json}};
+        window.react_mount = document.getElementById('react');
+    </script>
+    <script src="/static/frontend/{{component}}"></script>
+{#  {% block below_react_app %}{% endblock %}#}
+{% endblock %}

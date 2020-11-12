@@ -1,57 +1,44 @@
 {
-  "name": "django_react_pac",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:8000",
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "build": "webpack",
+    "watch": "webpack --watch --mode development"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nivo/sunburst": "^0.61.0",
+    "file-loader": "^6.0.0",
+    "image-webpack-loader": "^6.0.0",
+    "url-loader": "^4.1.0"
   },
   "dependencies": {
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-scripts": "3.3.1"
-  },
-  "devDependencies": {
-    "@apollo/react-common": "3.1.3",
-    "@apollo/react-components": "3.1.3",
-    "@apollo/react-hooks": "3.1.3",
-    "@apollo/react-testing": "3.1.3",
-    "apollo-boost": "0.4.7",
-    "apollo-cache-persist": "0.1.1",
-    "apollo-link-context": "1.0.19",
-    "apollo-link-rest": "0.7.3",
-    "apollo-link-schema": "1.2.4",
-    "apollo-link-state": "0.4.2",
-    "apollo-upload-client": "12.1.0",
-    "axios": "0.19.2",
-    "graphql": "14.6.0",
-    "graphql-tag": "2.10.3",
-    "graphql-tools": "4.0.6",
-    "localforage": "1.7.3",
-    "node-sass": "4.13.1",
-    "raven-js": "3.27.2",
-    "react-alert": "6.0.0",
-    "react-alert-template-basic": "1.0.0",
-    "react-cookies": "0.1.1",
-    "react-document-title": "2.0.3",
-    "react-router-dom": "5.1.2",
-    "react-transition-group": "4.3.0"
-  },
-  "engines": {
-    "node": ">=9.11.1",
-    "npm": ">=5.6.0",
-    "yarn": ">=1.6.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@material-ui/core": "^4.9.11",
+    "@nivo/bar": "^0.61.1",
+    "@nivo/pie": "^0.61.1",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.2.1",
+    "bootstrap": "^4.4.1",
+    "downloadbutton": "^1.0.0",
+    "install": "^0.13.0",
+    "npm": "^6.14.4",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-download-link": "^2.3.0",
+    "react-hot-loader": "^4.12.20",
+    "react-html-parser": "^2.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
 }
