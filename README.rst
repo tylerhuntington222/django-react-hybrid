@@ -1,7 +1,7 @@
 django-react-pac
 ================
 
-Boilerplate for Django project with React frontend that follows the 'Page as component' design pattern.'
+Boilerplate for Django project with React frontend that implements the 'page as component' (PAC) design pattern.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
