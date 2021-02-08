@@ -21,7 +21,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = "django-react-pac"
+project = "django-react-hybrid"
 copyright = """2020, Tyler Huntington"""
 author = "Tyler Huntington"
 

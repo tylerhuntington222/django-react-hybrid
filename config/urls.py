@@ -18,7 +18,7 @@ urlpatterns = [
     # User management from django-all-auth
     path("about/", AboutView.as_view(), name='about'),
     path("people/", PeopleView.as_view(), name='people'),
-    path("users/", include("django_react_pac.users.urls", namespace="users")),
+    path("users/", include("django_react_hybrid.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
 
     # Django Admin, use {% url 'admin:index' %}
@@ -36,7 +36,7 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     # DRF API docs
-    path("api-docs/", include_docs_urls(title="django-react-pac REST API", public=False)),
+    path("api-docs/", include_docs_urls(title="django-react-hybrid REST API", public=False)),
 ]
 
 # API URLS

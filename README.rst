@@ -1,7 +1,8 @@
-django-react-pac
+django-react-hybrid
 ================
 
-Boilerplate for Django project with React frontend that implements the 'page as component' (PAC) design pattern.
+Boilerplate for Django project with hybrid frontend for mixing and matching
+Django templates and React components.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
@@ -14,10 +15,10 @@ Boilerplate for Django project with React frontend that implements the 'page as 
 :License: MIT
 
 
-Settings
+Configuration
 --------
 
-Moved to settings_.
+See Cookicutter Django docs for how to configure _settings.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
@@ -42,7 +43,7 @@ Running type checks with mypy:
 
 ::
 
-  $ mypy django_react_pac
+  $ mypy django_react_hybrid
 
 Test coverage
 ^^^^^^^^^^^^^
@@ -63,7 +64,7 @@ Running tests with py.test
 Live reloading and Sass CSS compilation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Moved to `Live reloading and SASS compilation`_.
+Refer to Cookicutter Django docs for `live reloading and SASS compilation`_.
 
 .. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
@@ -78,7 +79,7 @@ To run a celery worker:
 
 .. code-block:: bash
 
-    cd django_react_pac
+    cd django_react_hybrid
     celery -A config.celery_app worker -l info
 
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.

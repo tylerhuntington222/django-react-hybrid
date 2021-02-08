@@ -23,8 +23,8 @@ if __name__ == "__main__":
         raise
 
     # This allows easy placement of apps within the interior
-    # django_react_pac directory.
+    # django_react_hybrid directory.
     current_path = os.path.dirname(os.path.abspath(__file__))
-    sys.path.append(os.path.join(current_path, "django_react_pac"))
+    sys.path.append(os.path.join(current_path, "django_react_hybrid"))
 
     execute_from_command_line(sys.argv)

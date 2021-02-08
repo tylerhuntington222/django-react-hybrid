@@ -1,6 +1,6 @@
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from django.conf import settings
-from django_react_pac.users.api.views import UserViewSet
+from django_react_hybrid.users.api.views import UserViewSet
 
 if settings.DEBUG:
     router = DefaultRouter()

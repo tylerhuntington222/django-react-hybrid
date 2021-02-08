@@ -4,7 +4,7 @@ from celery import Celery
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
-app = Celery("django_react_pac")
+app = Celery("django_react_hybrid")
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.

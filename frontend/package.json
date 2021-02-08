@@ -14,31 +14,31 @@
   "license": "ISC",
   "devDependencies": {
     "@nivo/sunburst": "^0.61.0",
-    "file-loader": "^6.0.0",
+    "file-loader": "^6.2.0",
     "image-webpack-loader": "^6.0.0",
-    "url-loader": "^4.1.0"
+    "url-loader": "^4.1.1"
   },
   "dependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@material-ui/core": "^4.9.11",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@material-ui/core": "^4.11.2",
     "@nivo/bar": "^0.61.1",
     "@nivo/pie": "^0.61.1",
     "axios": "^0.19.2",
-    "babel-loader": "^8.2.1",
-    "bootstrap": "^4.4.1",
+    "babel-loader": "^8.2.2",
+    "bootstrap": "^4.5.3",
     "downloadbutton": "^1.0.0",
     "install": "^0.13.0",
-    "npm": "^6.14.4",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.0.0",
-    "react-dom": "^16.13.1",
+    "npm": "^6.14.11",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.3",
+    "react-dom": "^16.14.0",
     "react-download-link": "^2.3.0",
-    "react-hot-loader": "^4.12.20",
+    "react-hot-loader": "^4.13.0",
     "react-html-parser": "^2.0.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.1"
   }
 }

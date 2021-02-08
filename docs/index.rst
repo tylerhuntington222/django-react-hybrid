@@ -1,9 +1,9 @@
-.. django-react-pac documentation master file, created by
+.. django-react-hybrid documentation master file, created by
    sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to django-react-pac's documentation!
+Welcome to django-react-hybrid's documentation!
 ======================================================================
 
 .. toctree::

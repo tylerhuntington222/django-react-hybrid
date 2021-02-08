@@ -7,8 +7,8 @@ import os
 
 ROOT_DIR = (
     environ.Path(__file__) - 3
-)  # (django_react_pac/config/settings/base.py - 3 = django_react_pac/)
-APPS_DIR = ROOT_DIR.path("django_react_pac")
+)  # (django_react_hybrid/config/settings/base.py - 3 = django_react_hybrid/)
+APPS_DIR = ROOT_DIR.path("django_react_hybrid")
 REACT_APP_DIR = ROOT_DIR.path("frontend")
 
 env = environ.Env()
@@ -79,8 +79,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "django_react_pac.users.apps.UsersConfig",
-    "django_react_pac.custom_templatetags",
+    "django_react_hybrid.users.apps.UsersConfig",
+    "django_react_hybrid.custom_templatetags",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -89,7 +89,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # MIGRATIONS
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "django_react_pac.contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "django_react_hybrid.contrib.sites.migrations"}
 
 # AUTHENTICATION
 # ------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "django_react_pac.utils.context_processors.settings_context",
+                "django_react_hybrid.utils.context_processors.settings_context",
             ],
             # "libraries": {
             #     'custom_templatetags': 'custom_templatetags.templatetags'
@@ -301,9 +301,9 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "django_react_pac.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "django_react_hybrid.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "django_react_pac.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "django_react_hybrid.users.adapters.SocialAccountAdapter"
 
 
 # django-reset-framework
@@ -338,7 +338,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # ------------------------------------------------------------------------------
 # See: http://docs.graphene-python.org/projects/django/en/latest/tutorial-plain/#update-settings
 GRAPHENE = {
-    "SCHEMA": "django_react_pac.graphql.schema.schema",
+    "SCHEMA": "django_react_hybrid.graphql.schema.schema",
     'SCHEMA_OUTPUT': 'frontend/src/apollo/schema.json',
     'SCHEMA_INDENT': 2,
     "MIDDLEWARE": [
