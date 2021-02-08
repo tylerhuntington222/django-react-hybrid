@@ -5,12 +5,12 @@
 {#  {% block above_react_app %}{% endblock %}#}
     <div id="react">
         <!-- Contents get replaced by mounted React.Component -->
-        <i class="pending">Loading components...</i><br><br>
+        <i class="pending">Loading...</i><br><br>
     </div>
 
     <script>
-      // make sure to escape props to prevent XSS!
-      // See here for the source for the json filter:
+      // escape props to prevent XSS!
+      // source for the json filter can be found here:
       // https://gist.github.com/pirate/c18bfe4fd96008ffa0aef25001a2e88f
         window.props = {{props|json}};
         window.react_mount = document.getElementById('react');

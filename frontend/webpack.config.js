@@ -2,11 +2,8 @@ const path = require('path');
 module.exports = {
   // context: path.resolve(__dirname, "src"),
   entry: {
-    'AboutPage': path.resolve(__dirname, 'src', 'AboutPageApp.js'),
     'HomePage': path.resolve(__dirname, 'src', 'HomePageApp.js'),
-    'PeoplePage': path.resolve(__dirname, 'src', 'PeoplePageApp.js'),
-    // 'home': path.resolve(__dirname, 'src', 'home.js')
-    // 'app': path.resolve(__dirname, 'src', 'components', 'separations', 'app.js')
+    'ItemsPage': path.resolve(__dirname, 'src', 'ItemsPageApp.js'),
   },
   output: {
     path: path.resolve(__dirname, 'build', 'static', 'frontend'),

@@ -8,26 +8,27 @@ from graphene_file_upload.django import FileUploadGraphQLView
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.documentation import include_docs_urls
 from django.views.generic import TemplateView
-from config.views import HomeView, AboutView, PeopleView
-
+from config.views import HomeView
 
 urlpatterns = [
-    path("", HomeView.as_view(), name='home'),
-    re_path(r'^app/(?P<route>.*)$', TemplateView.as_view(template_name="index.html"), name='app'),
+                  path("", HomeView.as_view(), name='home'),
+                  re_path(r'^app/(?P<route>.*)$',
+                          TemplateView.as_view(template_name="index.html"),
+                          name='app'),
 
-    # User management from django-all-auth
-    path("about/", AboutView.as_view(), name='about'),
-    path("people/", PeopleView.as_view(), name='people'),
-    path("users/", include("django_react_hybrid.users.urls", namespace="users")),
-    path("accounts/", include("allauth.urls")),
+                  # User management from django-all-auth
+                  # path("people/", PeopleView.as_view(), name='people'),
+                  path("users/", include("django_react_hybrid.users.urls",
+                                         namespace="users")),
+                  path("accounts/", include("allauth.urls")),
+                  path("items/", include("items.urls")),
 
-    # Django Admin, use {% url 'admin:index' %}
-    path(settings.ADMIN_URL, admin.site.urls),
+                  # Django Admin, use {% url 'admin:index' %}
+                  path(settings.ADMIN_URL, admin.site.urls),
 
-    # Your stuff: custom urls includes go here
+                  # Your stuff: custom urls includes go here
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
 urlpatterns += [
@@ -36,13 +37,15 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     # DRF API docs
-    path("api-docs/", include_docs_urls(title="django-react-hybrid REST API", public=False)),
+    path("api-docs/",
+         include_docs_urls(title="django-react-hybrid REST API", public=False)),
 ]
 
 # API URLS
 urlpatterns += [
     # GraphQL
-    path("graphql/", csrf_exempt(FileUploadGraphQLView.as_view(graphiql=True, pretty=True))),
+    path("graphql/", csrf_exempt(
+        FileUploadGraphQLView.as_view(graphiql=True, pretty=True))),
 ]
 
 if settings.DEBUG:
@@ -69,4 +72,5 @@ if settings.DEBUG:
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
 
-        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+        urlpatterns = [path("__debug__/",
+                            include(debug_toolbar.urls))] + urlpatterns
