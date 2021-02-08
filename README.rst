@@ -1,5 +1,5 @@
 django-react-hybrid
-================
+====================
 
  Django boilerplate for projects that want to render
  templates and React components interchangebly.
