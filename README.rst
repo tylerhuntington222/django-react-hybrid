@@ -82,7 +82,7 @@ By default, this app uses Django's built in user authentication system.
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
 Type checks
-^^^^^^^^^^^
+-------------
 
 Running type checks with mypy:
 
@@ -91,7 +91,7 @@ Running type checks with mypy:
   $ mypy django_react_pac
 
 Test coverage
-^^^^^^^^^^^^^
+-------------
 
 To run the tests, check your test coverage, and generate an HTML coverage report::
 
@@ -100,23 +100,23 @@ To run the tests, check your test coverage, and generate an HTML coverage report
     $ open htmlcov/index.html
 
 Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 ::
 
   $ pytest
 
 Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
 
-Moved to `Live reloading and SASS compilation`_.
+Refer to the `Live reloading and SASS compilation`_ of the Cookicutter Django docs.
 
 .. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
 
 
 Celery
-^^^^^^
+----------------------------------------
 
 This app comes with Celery.
 
