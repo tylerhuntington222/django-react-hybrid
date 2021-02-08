@@ -9,31 +9,31 @@ class ItemsPage extends React.Component {
 
   render() {
     return (
-     // <div>
+      // <div>
       //  {this.props.items.map(item =>
-       //   <Item item={item}/>
-     //   )}
-    //  </div>
-<div>
-    <table className={'table'}>
-      <th>
-        Item
-      </th>
-      <th>
-        Color
-      </th>
-      <th>
-        Quantity
-      </th>
-      {this.props.items.map(item =>
-      <tr>
-        <td>{item.name}</td>
-        <td>{item.color}</td>
-        <td>{item.quantity}</td>
-      </tr>
-      )}
-    </table>
-  </div>
+      //   <Item item={item}/>
+      //   )}
+      //  </div>
+      <div className={'my-3'}>
+        <table className={'table'}>
+          <th>
+            Item
+          </th>
+          <th>
+            Color
+          </th>
+          <th>
+            Quantity
+          </th>
+          {this.props.items.map(item =>
+            <tr>
+              <td>{item.name}</td>
+              <td>{item.color}</td>
+              <td>{item.quantity}</td>
+            </tr>
+          )}
+        </table>
+      </div>
     )
   }
 }

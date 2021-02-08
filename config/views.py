@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 class HomeView(TemplateView):
-    title = 'Home'
+    title = ''
     template = 'pages/home.html'
     component = 'HomePage.js'
 

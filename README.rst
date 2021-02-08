@@ -1,7 +1,7 @@
 django-react-hybrid
 ====================
 
- Django project boilerplate for rendering
+ Django project template for rendering
  templates and React components interchangebly on the frontend.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg

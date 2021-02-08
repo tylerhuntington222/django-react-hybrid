@@ -8,12 +8,23 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>Hello World</div>
+      <div className="jumbotron my-5">
+        <h1
+          className="display-4"> Welcome
+        </h1>
+      <hr/>
+        <p className="lead">This Django project template provides a flexible
+          frontend for
+          rendering templates and React components interchangebly.
+        </p>
+      </div>
     )
   }
 }
 
 ReactDOM.render(
-    React.createElement(Home, window.props),    // gets the props that are passed in the template
-    window.react_mount,                                // a reference to the #react div that we render to
+  // gets the props that are passed in the template
+  React.createElement(Home, window.props),
+  // a reference to the #react div that we render to
+  window.react_mount,
 )
