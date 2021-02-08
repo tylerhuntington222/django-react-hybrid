@@ -14,19 +14,60 @@ django-react-hybrid
 
 :License: MIT
 
-
-Configuration
+Getting Started
 --------
 
-See Cookicutter Django docs for how to configure _settings.
+::
+
+git clone https://github.com/tylerhuntington222/django-react-hybrid.git
+
+Create a Python (>3.6) virtual environment using your CLI of choice and
+activate it.
+
+::
+
+pip install -r requirements.txt
+
+Make sure you have `Node.js and npm`_. installed
+..https://www.npmjs.com/get-npm
+
+.. _ `Node.js and npm: https://www.npmjs.com/get-npm`
+
+::
+
+$ cd frontend
+$ npm install
+
+To watch and hot-reload JSX in the `frontend/src` directory during development,
+use the following command (executed from within the `frontend` directory):
+
+::
+
+$ npm run watch
+
+To start up Django's development server, use the following command (executed
+from the root project directory):
+
+::
+
+./manage.py runserver
+
+
+
+Configurations
+--------
+
+For configuration options, refer to the settings_. section of the Django
+Cookiecutter docs.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
 Basic Commands
 --------------
 
-Setting Up Your Users
+User Accounts
 ^^^^^^^^^^^^^^^^^^^^^
+By default, this app uses Django's built in user authentication system.
 
 * To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
 
@@ -43,7 +84,7 @@ Running type checks with mypy:
 
 ::
 
-  $ mypy django_react_hybrid
+  $ mypy django_react_pac
 
 Test coverage
 ^^^^^^^^^^^^^
@@ -64,7 +105,7 @@ Running tests with py.test
 Live reloading and Sass CSS compilation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Refer to Cookicutter Django docs for `live reloading and SASS compilation`_.
+Moved to `Live reloading and SASS compilation`_.
 
 .. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
@@ -79,7 +120,7 @@ To run a celery worker:
 
 .. code-block:: bash
 
-    cd django_react_hybrid
+    cd django_react_pac
     celery -A config.celery_app worker -l info
 
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
