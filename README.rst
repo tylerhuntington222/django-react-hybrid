@@ -15,23 +15,29 @@ django-react-hybrid
 :License: MIT
 
 Getting Started
---------
+---------------
+
+1. Clone this repository:
 
 ::
 
-git clone https://github.com/tylerhuntington222/django-react-hybrid.git
+$ git clone https://github.com/tylerhuntington222/django-react-hybrid.git
+$ cd django-react-hybrid
 
-Create a Python (>3.6) virtual environment using your CLI of choice and
+2. Create a Python (>3.6) virtual environment using your CLI of choice and
 activate it.
 
+3. Install Python dependencies:
+
 ::
 
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 
-Make sure you have `Node.js and npm`_. installed
-..https://www.npmjs.com/get-npm
+4. Make sure you have `Node.js and npm`_. installed
 
 .. _ `Node.js and npm: https://www.npmjs.com/get-npm`
+
+5. Install frontend dependencies:
 
 ::
 
@@ -45,28 +51,26 @@ use the following command (executed from within the `frontend` directory):
 
 $ npm run watch
 
-To start up Django's development server, use the following command (executed
+To start up Django's local development server on http://127.0.0.1:8000/, use the following command (executed
 from the root project directory):
 
 ::
 
-./manage.py runserver
+$ ./manage.py runserver 8000
 
 
 
 Configurations
---------
+--------------
 
-For configuration options, refer to the settings_. section of the Django
+For configuration options, refer to the settings_ section of the Django
 Cookiecutter docs.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
-Basic Commands
---------------
-
 User Accounts
-^^^^^^^^^^^^^^^^^^^^^
+-------------
+
 By default, this app uses Django's built in user authentication system.
 
 * To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
